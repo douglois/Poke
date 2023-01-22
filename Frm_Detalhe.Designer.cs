@@ -38,6 +38,7 @@
             this.picImagemDetalhe.Location = new System.Drawing.Point(21, 17);
             this.picImagemDetalhe.Name = "picImagemDetalhe";
             this.picImagemDetalhe.Size = new System.Drawing.Size(250, 262);
+            this.picImagemDetalhe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagemDetalhe.TabIndex = 0;
             this.picImagemDetalhe.TabStop = false;
             // 

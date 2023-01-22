@@ -13,17 +13,25 @@ namespace PokeSon
 {
     public partial class Frm_Detalhe : Form
     {
-
-        public Frm_Detalhe()
+        string idSelecionado = "";
+        public Frm_Detalhe(string id)
         {
             InitializeComponent();
+            idSelecionado = id;
+            PreencheDados();
+
         }
 
         public void PreencheDados()
         {
-            DadosPokemon.Root dadosPokemon = new DadosPokemon.Root();
+            string urlSelecionado = "https://pokeapi.co/api/v2/pokemon/" + idSelecionado;
+
             CaracteristicaPokemon.Root caracteristicaPokemon = new CaracteristicaPokemon.Root();
-            dadosPokemon = DadosPokemon.DeserializaClassDados();
+
+            caracteristicaPokemon = CaracteristicaPokemon.DeserializaClassCaracteristica(urlSelecionado);
+
+            picImagemDetalhe.ImageLocation = caracteristicaPokemon.sprites.other.officialartwork.front_default;
+            txtNomeDetalhe.Text = caracteristicaPokemon.name;
         }
     }
 }
