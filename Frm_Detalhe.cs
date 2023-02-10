@@ -31,7 +31,7 @@ namespace PokeSon
             caracteristicaPokemon = CaracteristicaPokemon.DeserializaClassCaracteristica(urlSelecionado);
 
             picImagemDetalhe.ImageLocation = caracteristicaPokemon.sprites.other.officialartwork.front_default;
-            txtNomeDetalhe.Text = caracteristicaPokemon.name;
+            lblNome.Text = caracteristicaPokemon.name;
         }
     }
 }

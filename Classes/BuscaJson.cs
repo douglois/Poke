@@ -12,7 +12,7 @@ namespace PokeSon.Classes
     {
         public static string GetJsonDados()
         {
-            var request = WebRequest.Create("https://pokeapi.co/api/v2/pokemon?limit=252");
+            var request = WebRequest.Create("https://pokeapi.co/api/v2/pokemon?limit=55");
             request.Method = "GET";
             var response = (HttpWebResponse)request.GetResponse();
             if (response.StatusCode == HttpStatusCode.OK)
